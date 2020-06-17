@@ -21,15 +21,17 @@ document.getElementById('samHead').append(addDateTime)
 // function to make the rows change color based on TOD
 
 
-// function to grab text-inputs and send to local storage
+// function to grab text-inputs by button click and send to local storage
+$('.btn').on('click', function () {
+    alert('the button works!')
+})
 
 
 
 
 
 
-
-
+// Murad code (won't look the same for me, but reference)
 // $("button").on("click", function () {
 //     event.preventDefault()
 //     for (var i = 0; i < ids.length; i++) {
