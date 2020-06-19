@@ -10,45 +10,177 @@ var ids = {
 
 console.log(ids);
 
-console.log(moment().hours());
-
 // create the M/D/Y for the header
 var headBreak = document.createElement("br")
 var addDateTime = moment().dayOfYear(Number)
 document.getElementById('samHead').append(headBreak)
 document.getElementById('samHead').append(addDateTime)
 
-// function to make the rows change color based on TOD
 
+// get 9 am field
+var getNine = localStorage.getItem(ids.formIds[0])
+console.log(getNine);
+$('#form9').val(getNine)
 
-// function to grab text-inputs by button click and send to local storage
-$('.btn').on('click', function () {
-    alert('the button works!')
+// get 10 am field
+var getTen = localStorage.getItem(ids.formIds[1])
+console.log(getTen);
+$('#form10').val(getTen)
+
+// get 11 am field
+var getEleven = localStorage.getItem(ids.formIds[2])
+console.log(getEleven);
+$('#form11').val(getEleven)
+
+// get 12 pm field
+var getTwelve = localStorage.getItem(ids.formIds[3])
+console.log(getTwelve);
+$('#form12').val(getTwelve)
+
+// get 1 pm field
+var getOne = localStorage.getItem(ids.formIds[4])
+console.log(getOne);
+$('#form1').val(getOne)
+
+// get 2 pm field
+var getTwo = localStorage.getItem(ids.formIds[5])
+console.log(getTwo);
+$('#form2').val(getTwo)
+
+// get 3 pm field
+var getThree = localStorage.getItem(ids.formIds[6])
+console.log(getThree);
+$('#form3').val(getThree)
+
+// get 4 pm field
+var getFour = localStorage.getItem(ids.formIds[7])
+console.log(getFour);
+$('#form4').val(getFour)
+
+// get 5 pm field
+var getFive = localStorage.getItem(ids.formIds[8])
+console.log(getFive);
+$('#form5').val(getFive)
+
+// function to make the rows change color based on TOD - to be refractored with for loop using IDs index
+// after 9 am
+if (moment().hours() >= 9) {
+    $('#9').css("background-color", "#DCDCDC");
+}
+// after 10 am
+if (moment().hours() >= 10) {
+    $('#10').css("background-color", "#DCDCDC");
+}
+// after 11 am
+if (moment().hours() >= 11) {
+    $('#11').css("background-color", "#DCDCDC");
+}
+// after 12 pm
+if (moment().hours() >= 12) {
+    $('#12').css("background-color", "#DCDCDC");
+}
+// after 1 pm
+if (moment().hours() >= 13) {
+    $('#1').css("background-color", "#DCDCDC");
+}
+// after 2 pm
+if (moment().hours() >= 14) {
+    $('#2').css("background-color", "#DCDCDC");
+}
+// after 3 pm
+if (moment().hours() >= 15) {
+    $('#3').css("background-color", "#DCDCDC");
+}
+// after 4 pm
+if (moment().hours() >= 16) {
+    $('#4').css("background-color", "#DCDCDC");
+}
+// after 5 pm
+if (moment().hours() >= 17) {
+    $('#5').css("background-color", "#DCDCDC");
+}
+
+// 9 am input to local storage
+$(ids.buttonIds[0]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[0]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[0], text)
+
 })
-
-
-
-
-
-
-// Murad code (won't look the same for me, but reference)
-// $("button").on("click", function () {
-//     event.preventDefault()
-//     for (var i = 0; i < ids.length; i++) {
-//         var inputId = $(ids[i]).attr("id");
-//         var inputValue = $(ids[i]).val();
-//            var plansObj = {
-//           "inputId": inputId,
-//           "inputValue": inputValue };
-//         if (plansObj["inputValue"] !== "") {
-//           plansArray.push(plansObj);
-//         }
-//         localStorage.setItem("plansArray", JSON.stringify(plansArray));   
-//     }
-// });
-
-
-
+// 10 am input to local storage
+$(ids.buttonIds[1]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[1]).val()
+        console.log(text);
+        localStorage.getItem(ids.formIds[1], text)
+        localStorage.setItem(ids.formIds[1], text)
+    // add the GET here
+    
+})
+// 11 am input to local storage
+$(ids.buttonIds[2]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[2]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[2], text)
+    // add the GET here
+    
+})
+// 12 pm input to local storage
+$(ids.buttonIds[3]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[3]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[3], text)
+    // add the GET here
+    
+})
+// 1 pm input to local storage
+$(ids.buttonIds[4]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[4]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[4], text)
+    // add the GET here
+    
+})
+// 2 pm input to local storage
+$(ids.buttonIds[5]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[5]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[5], text)
+    // add the GET here
+    
+})
+// 3 pm input to local storage
+$(ids.buttonIds[6]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[6]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[6], text)
+    // add the GET here
+    
+})
+// 4 pm input to local storage
+$(ids.buttonIds[7]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[7]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[7], text)
+    // add the GET here
+    
+})
+// 5 pm input to local storage
+$(ids.buttonIds[8]).on('click', function () {
+    event.preventDefault()
+    var text = $(ids.formIds[8]).val()
+        console.log(text);
+        localStorage.setItem(ids.formIds[8], text)
+    // add the GET here
+    
+})
 
 
 
