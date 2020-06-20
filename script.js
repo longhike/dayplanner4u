@@ -64,89 +64,13 @@ if (moment().hours() >= 16) {
 if (moment().hours() >= 17) {
     $('#5').css("background-color", "#DCDCDC");
 }
-
-// 9 am input to local storage
-$(ids.buttonIds[0]).on('click', function () {
+// this loop sets each time any button is clicked, the whole array of IDs is set to local storage.
+$('.btn').on('click', function () {
     event.preventDefault()
-    var text = $(ids.formIds[0]).val()
+    for (i = 0; i < ids.formIds.length; i++) {
+        var text = $(ids.formIds[i]).val()
         console.log(text);
-        localStorage.setItem(ids.formIds[0], text)
-
+        localStorage.setItem(ids.formIds[i], text)
+    }
 })
-// 10 am input to local storage
-$(ids.buttonIds[1]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[1]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[1], text)
-    
-})
-// 11 am input to local storage
-$(ids.buttonIds[2]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[2]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[2], text)
-    
-})
-// 12 pm input to local storage
-$(ids.buttonIds[3]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[3]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[3], text)
-    
-})
-// 1 pm input to local storage
-$(ids.buttonIds[4]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[4]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[4], text)
-    
-})
-// 2 pm input to local storage
-$(ids.buttonIds[5]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[5]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[5], text)
-    
-})
-// 3 pm input to local storage
-$(ids.buttonIds[6]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[6]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[6], text)
-    
-})
-// 4 pm input to local storage
-$(ids.buttonIds[7]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[7]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[7], text)
-    
-})
-// 5 pm input to local storage
-$(ids.buttonIds[8]).on('click', function () {
-    event.preventDefault()
-    var text = $(ids.formIds[8]).val()
-        console.log(text);
-        localStorage.setItem(ids.formIds[8], text)
-    
-})
-
-
-
-
-
-
-
-
-
-
-
-
 
